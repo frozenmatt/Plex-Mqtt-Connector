@@ -1,6 +1,12 @@
-version: '2'
+version: '3.2'
+
 services:
   plex-mqtt-connector:
-    build: .
+    image: pyronox/plex-mqtt-connector:latest-arm64
+    container_name: plex-mqtt-connector
     ports:
       - "5000:5000"
+    restart: always
+    environment:
+      - MQTT_BROKER_HOST=<BROKER IP>
+      - MQTT_TOPIC='plex/'
