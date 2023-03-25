@@ -9,4 +9,7 @@ services:
     restart: always
     environment:
       - MQTT_BROKER_HOST=<BROKER IP>
-      - MQTT_TOPIC='plex/'
+      - MQTT_BROKER_PORT=<BROKER PORT>
+      - MQTT_BROKER_USER=<BROKER USER>
+      - MQTT_BROKER_PASSWORD=<BROKER PASS>
+      - MQTT_TOPIC=plex/
